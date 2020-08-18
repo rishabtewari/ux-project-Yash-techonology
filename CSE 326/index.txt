@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Online Shopping|India</title>
+<style>
+
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+
+.main_header {
+ margin:16px 16px 0px 10px;
+ padding:16px;
+ height:100px;
+ background-color:none;
+ box-shadow:2px 5px 5px 0px rgba(0,0,0,0.2);
+ width:96%;
+} 
+
+#search {
+ height:40px;
+ border-style:none;
+ color:grey;
+ padding-left:10px;
+ width:90.5%;
+}
+#search:focus {
+ border-style:none;
+}
+
+#search_btn {
+ background-color:rgba(239, 240, 242,0.2);
+ border:none;
+ float:right;
+ height:42px;
+ width:50px; 
+ cursor:pointer;
+ transition-duration:1s;
+
+ }
+#search_btn:hover {
+ background-color:#eff0f2;
+}
+.search_bar {
+ position:relative;
+ border-color:#2a67b2;
+ display:inline-block;
+ margin-left:150px;
+ width:50%;
+ box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.search_bar:hover .search_hints {
+ display:block;
+ position:absolute;
+ 
+}
+.search_hints a {
+ display:block;
+ padding-top:10px;
+ padding-left:10px;
+ text-decoration:none;
+ color:grey;
+ font-family:ms reference sans srief;
+ transition-duration:0.4s;
+}
+.search_hints a:hover {
+ background-color:rgb(225, 227, 232)
+}
+.search_hints {
+ display:none;
+ background-color:rgb(235, 238, 244);
+ width:100%;
+}
+
+.header_opt {
+ position:absolute;
+ display:inline-block;
+ right:50px;
+ top:70px;
+ width:350px;
+ color:blue;
+ border-top-left-radius:20px;
+ border-top-right-radius:20px;
+ background-color:rgba(36, 92, 160,1);
+ font-family:ms reference sans serif;
+}
+
+.login {
+ text-decoration:none;
+ transition-duration:0.4s;
+ font-size:18px;
+color:white;
+ display:block;
+ float:left;
+ border-top-left-radius:20px;
+ width:104.66px;
+ text-align:center;
+ padding-top:10px;
+ padding-bottom:20px;
+
+}
+.login:hover {
+  background-color:rgb(49, 120, 206);
+}
+.more {
+ text-decoration:none; 
+ font-size:18px;
+ transition-duration:0.4s;
+ display:block;
+ float:left;
+color:white;
+ width:104.66px;
+ text-align:center;
+ padding-top:10px;
+ padding-bottom:20px;
+
+}
+.more:hover {
+ background-color:rgb(49, 120, 206);
+}
+.more_drp_down {
+ position:relative;
+}
+.more_option {
+ display:none;
+ position:absolute;
+ background-color:#eff0f2;
+}
+.more_option a {
+ text-decoration:none;
+ display:block;
+ padding-left:10px;
+ padding-top:10px;
+ padding:10px;
+}
+.more_option a:hover {
+ background-color:rgb(225, 233, 247);
+}
+
+.more_drp_down:hover .more_option {
+ display:block;
+ float:left;
+ top:50px;
+ left:104px;
+}
+
+.cart_and_icon {
+ display:inline-block;
+ width:100.66px;
+ float:center;
+ padding-right:20px;
+ padding-left:20px;
+ border-top-right-radius:20px;
+}
+.cart {
+ text-decoration:none;
+ font-size:18px;
+ transition-duration:0.4s;
+ color:white;
+ display:inline-block;
+ text-align:center;
+ padding-top:10px;
+ padding-bottom:20px;
+ 
+}
+.cart_and_icon:hover {
+  background-color:rgb(49, 120, 206);
+}
+
+.nav_links {
+ background-color:rgba(36, 92, 160,1);
+ display:block;
+ margin-left:40px;
+ margin-top:6px;
+ margin-right:40px;
+ border-top-left-radius:20px;
+ border-bottom-left-radius:20px;
+ border-bottom-right-radius:20px;
+ height:50px;
+ width:95.8%;
+ 
+}
+.men_drp_down {
+ font-family:ms reference sans serif;
+ font-size:16px;
+ width:150px;
+ height:35px;
+ text-align:center;
+ padding-top:15px;
+ padding-left:20px;
+ transition-duration:0.4s;
+  border-top-left-radius:20px;
+ border-bottom-left-radius:20px;
+}
+.men_drp_content {
+ display:none;
+}
+.men {
+ text-decoration:none;
+ transition-duration:0.4s;
+ padding-top:18px;
+ margin-top:10px;
+ padding:20px;
+ padding-bottom:10px;
+}
+.men_drp_down:hover{
+ background-color:rgb(49, 120, 206);
+}
+
+.men_drp_down:hover .men_drp_content {
+ display:block;
+ margin-top:17px;
+ background-color:#eff0f2;
+ z-index:1;
+ widht:100%;
+ padding:20px;
+}
+
+.main_container {
+ margin:16px 16px 0px 10px;
+ padding:16px;
+ height:250px;
+ width:96%;
+ box-shadow:2px 5px 5px 0px rgba(0,0,0,0.2);
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- header -->
+
+<div id="wrapper">
+
+<div class="main_header">
+<img src="logo\l.png" alt="--Logo--" width="110" height="66">
+
+<div class="search_bar">
+<input type="text" value="Search" id="search" size="50">
+<div class="search_hints">
+<a href="#">Men shoes </a>
+<a href="#">Men clothing</a>
+<a href="#">Gaming computers</a>
+<a href="#">Laptops</a>
+<a href="#">Home appliances</a>
+</div>
+<button id="search_btn">
+<img src="images\search_logo.png" >
+</button>
+</div>
+
+<div class="header_opt">
+<a class="login" href="pages\login.html">Login</a>
+
+<div class="more_drp_down">
+<a class="more" href="#">More</a>
+<div class="more_option">
+<a href="#">Join Forums</a>
+<a href="#">Give Feedback</a>
+<a href="#">Download VKart App</a>
+</div>
+</div>
+
+<div class="cart_and_icon">
+<img src="images/cart.png" width="15px" height="15px">
+<a class="cart" href="#">Cart</a>
+</div>
+</div>
+
+<!-- navigation links -->
+
+<div class="nav_links">
+<div class="men_drp_down">
+<a href="#" class="men" style=" color:#eff0f2;">Men</a>
+<div class="men_drp_content">
+<a>men</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- content container -->
+
+<div class="main_container">
+
+<div class="slide_container">
+
+</div>
+
+</div>
+
+
+
+</div>
+</body>
+</html>

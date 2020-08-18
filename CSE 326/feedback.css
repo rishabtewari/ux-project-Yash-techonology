@@ -1,0 +1,59 @@
+
+.feedback-form {
+    position: relative;
+    left:25%;
+    width:45%;
+    height:650px;
+    box-shadow: 2px 2px 8px 2px #ccc;
+    margin-top:20px;
+    margin-bottom: 50px;
+    background-color:#fff;
+    padding-left:150px;
+    padding-top:20px;
+
+}
+.feed-caption {
+    font-size: 25px;
+    font-family: sans-serif;
+    color: gray;
+    text-align: center;
+}
+form > div {
+    display: flex;
+}
+form input[type=text], #feedEmail , input[type=tel]{
+   position: absolute;
+    box-shadow: 1px 1px 4px 1px #ccc;
+    border-style: none;
+    left:35%;
+    margin-top:5px;
+    width:300px;
+    padding:10px; 
+    color:grey;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+form textarea {
+    position: absolute;
+    box-shadow: 1px 1px 4px 1px #ccc;
+    border-style: none;
+    margin-top:5px;
+    padding:10px; 
+    color:grey;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+ 
+form #button {
+    width:450px;
+    padding:10px;
+    color:white;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color:#4cb1ca;
+    border-style: none;
+    transition-duration: 0.7s;
+}
+form #button:hover {
+      background-color:rgb(29, 48, 79);
+}

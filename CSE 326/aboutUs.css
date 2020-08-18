@@ -1,0 +1,37 @@
+#image img {
+    width:100%;
+    margin-top:5px;
+}
+ #know {
+    background-color: rgba(0,0,0,0.3);
+     width: 100%;
+     position: absolute;
+     top:40%;
+}
+#image p{
+    font-size: 65px;
+    color:white;
+    font-family: calibri;
+    text-align: center;
+}
+
+.content {
+    left:12%;
+    width:70%;
+    position: absolute;
+    top:90%;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px 2px #ccc;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:50px;
+}
+.content p {
+    font-size: 18px;
+    font-family: calibri;
+    line-height: 30px;
+    color:gray;
+}
+.content img {
+    margin-left:-40px;
+}

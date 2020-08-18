@@ -1,0 +1,180 @@
+<html>
+<head>
+    <title>VKart | Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    
+    <div class="login-container">
+        <a href="index.html" class="home">Home</a>
+    <div class="box">
+        
+        <div class="login-window" id="login-window">
+        <div class="header"><img src="logo/farmkart.png"></div>
+        <p class="caption">Sign In</p>
+            <p id="email-check-info" style="color:red;font-size:14px;"></p>
+        <form name="email-form" onsubmit="return searchEmail()">
+            
+        <input type="email"  name="email"  id="email" placeholder="Email" required>
+            <br/>
+            <br/>
+            <input type="submit" id="button" value="Next" >
+        </form>
+       <div class="noacc"><p id="noacc">No Account?
+        <a href="#" onclick="showSignup()">Create One!</a></p>
+        </div>
+        </div>
+        
+        <div class="loginNext" id="loginNext">
+            <div class="header"><img src="logo/farmkart.png"></div>
+            <div class="email-view">
+                <img src="images/account.svg"><p id="viewEmail" style="padding-left:55px;color:grey;font-family: sans-serif;padding-top: 5px;"></p>
+            </div>
+             
+            <p class="caption">Enter password</p>
+            <p id="password-check-info" style="color:red;font-size:14px;"></p>
+            <form name="pass-form" onsubmit="return searchPassword()" action="index.html">
+                <input type="password" placeholder="Password" id="pass" name="pass" required>
+                <br/>
+                <br/>
+                <div class="buttons">
+                    <button id="#back" width="50%">Back</button>
+                    <input type="submit" value="Login" id="#login">
+                </div>
+            </form>
+        </div>
+        
+        
+        
+        <div class="signupEmail" id="signupEmail">
+            <div class="header"><img src="logo/farmkart.png"></div>
+            <p class="caption">Create Account</p>
+            <form name="signup-email" id="signup-email" onsubmit="return enterEmail()">
+                <input type="email" name="email" placeholder="someone@example.com" required>
+                <br/>
+                <br/>
+                <input type="submit" id="button" value="Next">
+            </form>
+        </div>
+        
+        <div class="signupPass" id="signupPass">
+            <div class="header"><img src="logo/farmkart.png"></div>
+            <p class="caption">Create a Password</p>
+            <p style="font-size: 15px;font-family: sans-serif;">Enter the password you would like to use with your account.</p>
+            <p id="signup-check-pass" style="color:red;font-size:14px;"></p>
+            <form name="signup-pass" onsubmit="return enterPassword()" action="index.html">
+                <input type="password" name="pass" placeholder="Password" required>
+                <br/>
+                <br/>
+                <input type="submit" id="button" value="Next">
+            </form>
+        </div>
+    </div>
+        
+        <div class="last-signup" id="last-signup">
+            <p class="caption">Fill all the credentials.</p>
+            <hr>
+            <div class="form">
+                <form name="lastSignup" onsubmit="lastSignup()">
+                    First Name : <input type="text" name="firstname" required>
+                    <br/><br/>
+                    Last Name : <input type="text" name="lastname" required>
+                    <br/>
+                    <pre>Gender   :   M<input type="radio" name="gender" checked>     F<input type="radio" name="gender"></pre>
+                    <br/>
+                    Mobile No. : <input type="tel" maxlength="10" placeholder="987654321" name="mobNo" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                    <br/>
+                    <p>Address : </p><textarea cols="51" rows="6" name="address" placeholder="Enter Address" required></textarea>
+                    <br/>
+                    <input type="reset" name="reset">
+                    <input type="submit" name="submit">
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    
+    <script>
+        var user = ["vikashjammu@gmail.com"];
+        var pass = ["1234567890"];
+        var i=0;
+        var newuser,newpass;
+        
+        function searchEmail () {
+          
+            var email = document.forms["email-form"]["email"].value;
+            var flag=0;
+            for(i=0;i<user.length;i++)
+                {
+                    if(email == user[i])
+                        {
+                           flag = 1;
+                            break;
+                        }
+                }
+            
+            if(flag == 1)
+            { 
+                document.getElementById("login-window").style.display = "none";
+                document.getElementById("loginNext").style.display = "block";
+                document.getElementById("viewEmail").innerHTML = email;
+                return false;
+            }
+            else
+                {
+                   document.getElementById("email-check-info").innerHTML = "Not a valid Email address...";
+                    return false;
+                }
+            
+        }
+        
+        function searchPassword () {
+            var password = document.forms["pass-form"]["pass"].value;
+            if(password == pass[i])
+            { 
+                
+                return true;
+            }
+            else
+                {
+                   document.getElementById("password-check-info").innerHTML = "Not a valid password...";
+                    return false;
+                }
+            
+        }
+        
+        function showSignup() {
+            document.getElementById("login-window").style.display="none";
+            document.getElementById("signupEmail").style.display="block";
+        }
+        function enterEmail() {
+            newuser=document.forms["signup-email"]["email"].value;
+            document.getElementById("signupEmail").style.display="none";
+            document.getElementById("signupPass").style.display="block";
+            return false;
+        }
+        
+        function lastSignup() {
+            
+            return false;
+        }
+        function enterPassword() {
+            var temp = document.forms["signup-pass"]["pass"].value;
+            if(temp.length < 8)
+                {
+                    document.getElementById("signup-check-pass").innerHTML = "Password length should be greater than 8";
+                    return false;
+                }
+            else
+                {
+                    document.getElementById("signupPass").style.display="none";
+                    document.getElementById("last-signup").style.display="block";
+                    return false;
+                }
+        }
+    </script>
+</body>
+
+</html>

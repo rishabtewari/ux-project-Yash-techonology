@@ -1,0 +1,225 @@
+.container-1 {
+    position: relative;
+    width:100%;
+}
+.container-2 {
+    position: relative;
+    left:5%;
+    width:85%;
+    background: #fff;
+    
+}
+.container-3{
+    position: relative;
+    padding:10px;
+    display: grid;
+    grid-template-columns: 70px 40% auto;
+    
+}
+#preview {
+    width:550px;
+    height:550px;
+    left:50%;
+    position: absolute;
+    border-style: solid;
+    z-index: 1;
+    visibility: hidden;
+    background-repeat:no-repeat;
+    border-width: 1px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.container-3 #product-image-bar, #product-image-bar img{
+    width:45px;
+    margin-bottom:15px;
+}
+#product-image-bar img:hover {
+    border-right-style:solid;
+    border-right-width:2px;
+    border-right-color:#4cb1ca;
+}
+
+.path {
+    color:gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-left:75px;
+}
+.container-3 #product-image img{
+    width:450px;
+    position: absolute
+}
+.container-3 .header p{
+    font-size: 25px;
+    font-family: sans-serif;
+    
+}
+.container-3 .rating {
+    display: flex;
+    height:20px;
+}
+.price .old-price {
+    color:#ccc;
+    font-size: 16px;
+}
+.price div{
+    display: flex;
+    position: relative;
+    height:45px;
+}
+.price .new-price {
+    font-size: 25px;
+    color:red;
+    font-family: sans-serif;
+    margin-top:5px;
+}
+.price .product-offer {
+    color:gray;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    height:20px;
+    margin-top:5px;
+}
+.emi a{
+    font-size: 15px;
+    text-decoration: none;
+}
+.emi p{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.buy-container {
+    background-color: rgb(242, 243, 244);
+    border-radius: 2px;
+    position: relative;
+    height:200px;
+}
+.buy-container #addToCart {
+    position: absolute;
+    top:20%;
+    left:10%;
+    border-width: 0px;
+    border-radius: 5px;
+    background: rgb(27, 31, 38);
+    color:white;
+    height:50px;
+    width:200px;
+    transition-duration: 0.3s;
+}
+.buy-container #buyNow {
+    position: absolute;
+    top:20%;
+    left:45%;
+    height:50px;
+    width:200px;
+    border-width: 0px;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: #4cb1ca;
+    color:white;
+    transition-duration: 0.3s;
+}
+#buyNow:hover {
+    background-color:rgb(29, 48, 79);
+}
+.pincode {
+    display: flex;
+    position: absolute;
+    top:60%;
+    left:10%;
+    color:gray;
+}
+
+.pincode input{
+    height:30px;
+    margin-top:10px;
+    width:100px;
+    font-family: sans-serif;
+    padding-left:10px;
+}
+#pincodeCheck {
+    border-width: 0px;
+    border-radius: 5px;
+    background: rgb(27, 31, 38);
+    color:white;
+    margin-left:10px;
+    margin-top:10px;
+    height:36px;
+    width:100px;
+    transition-duration: 0.3s;
+}
+
+#pincodeCheck:hover,#addToCart:hover{
+    background:#fff;
+    border-style: solid;
+    border-width: 2px;
+    color:black;
+    border-color: rgb(27, 31, 38);
+}
+#pincode-check-info {
+    position: absolute;
+    top:77%;
+    left:20%;
+    color:green;
+}
+.product-info-page{
+    position: relative;
+    width:100%;
+    height:100%;
+    margin-top:50px;
+}
+
+.heading {
+    font-size: 20px;
+    font-family:sans-serif;
+   padding:15px;
+    border-top-style: solid;
+    border-top-color:  #4cb1ca;
+    border-top-width: 1px;
+}
+.info .caption {
+    padding-left:30px;
+    padding-top:10px;
+    border-bottom-style: dashed;
+    border-width: 1px;
+    border-bottom-color: #ccc;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+@keyframes fade {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+.highlights {
+    transition-duration: 1s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.info ul,li {
+    color:gray;
+    padding-top:5px;
+}
+table {
+    margin-left:50px;
+}
+table tr td {
+    padding-top:5px;
+}
+table .left-heading {
+    color:gray;
+    font-size: 14px;
+}
+table .caption2 {
+    padding-top:30px;
+    padding-bottom: 20px;
+    width:30%;
+    font-size: 17px;
+    font-weight: 500;
+}
+#description p {
+    margin-left:30px;
+}
+#terms_cond p {
+    margin-left:30px;
+}
